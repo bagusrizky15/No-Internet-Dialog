@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.imaginativeworld.oopsnointernet.callbacks.ConnectionCallback
 import org.imaginativeworld.oopsnointernet.dialogs.pendulum.NoInternetDialogPendulum
+import org.imaginativeworld.oopsnointernet.dialogs.signal.NoInternetDialogSignal
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        NoInternet.Builder(
+        NoInternetDialogSignal.Builder(
             this,
             lifecycle
         ).apply {
